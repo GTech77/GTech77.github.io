@@ -131,13 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
         `,
         achievements: `
             <h3>Achievements</h3>
-            <p>Founder & Managing Partner, The Verse Digital Assets, May 2023 - March 2025<br>
+            <p>Founder & Managing Partner, The Verse Digital Assets, December 2021 - March 2025<br>
             Engineered scalable investment protocols managing $1M+ in digital assets, developed proprietary token launch framework generating $1M in initial investment</p>
             <br>
             <p>Digital Innovation Specialist & Graduate Teaching Assistant, Coastal Carolina University, October 2023 - December 2024<br>
             Architected comprehensive blockchain curriculum, orchestrated multimedia content strategies driving 40% increase in student engagement metrics</p>
             <br>
-            <p>Studio Production Assistant, Videographer, Editor, ETV, December 2021 - May 2023<br>
+            <p>Studio Production Assistant, Videographer, Editor, ETV, May 2022 - October 2023<br>
             Optimized production systems achieving 30% improvement in operational efficiency, selected from 200+ candidates for prestigious production role</p>
             <br>
             <p>Lead Research Administrator, Cain and Daniels INC, March 2020 - August 2021<br>
