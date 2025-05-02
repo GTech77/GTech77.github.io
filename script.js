@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatbotContainer = document.querySelector('.chatbot-container');
     const scrollArrow = document.querySelector('.scroll-arrow');
     const heroVideo = document.getElementById('hero-video');
+    const backgroundMusic = document.getElementById('background-music');
 
     // Dip to black for splash video: start with opacity 0, fade in after 1 second
     splashVideo.style.opacity = '0';
@@ -12,18 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
         splashVideo.style.opacity = '1';
         splashVideo.style.transition = 'opacity 1s ease';
         splashVideo.play();
-    }, 1000); // 1-second delay for dip-to-black effect
+    }, 1000);
 
-    // Set hero video (leader.mp4) start time to 1:14 (74 seconds)
-    heroVideo.currentTime = 114;
-    heroVideo.style.opacity = '0'; // Initially hidden
+    // Set hero video start time to 1:14 (74 seconds)
+    heroVideo.currentTime = 74;
+    heroVideo.style.opacity = '0';
 
-    // Play hero video and fade in just before splash ends (at 5 seconds)
+    // Play hero video and fade in just before splash ends
     setTimeout(() => {
-        heroVideo.style.opacity = '0.5'; // Increased transparency
+        heroVideo.style.opacity = '0.5';
         heroVideo.style.transition = 'opacity 1s ease';
         heroVideo.play();
-    }, 5000); // 5 seconds, right before splash fades out
+    }, 5000);
 
     // Hide portfolio content initially
     portfolioContent.style.opacity = '0';
@@ -34,19 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         splashOverlay.style.display = 'none';
         portfolioContent.style.opacity = '1';
-
+        backgroundMusic.play(); // Start background music when content fades in
         // Fade in chatbot after 1 second
         setTimeout(() => {
             chatbotContainer.style.opacity = '1';
             chatbotContainer.style.transition = 'opacity 1s ease';
-
             // Fade in arrow 0.5 seconds after chatbot
             setTimeout(() => {
                 scrollArrow.style.opacity = '1';
                 scrollArrow.style.transition = 'opacity 1s ease';
             }, 500);
         }, 1000);
-    }, 6000); // 6 seconds total (5s splash + 1s fade)
+    }, 6000);
 
     // Chatbot Interaction
     const chatbotBtns = document.querySelectorAll('.chatbot-btn');
